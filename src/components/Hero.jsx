@@ -22,14 +22,14 @@ export function HeroContent() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
-          className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
+          className="text-5xl md:text-6xl lg:text-7xl font-medium mb-6 leading-tight"
         >
-          <span className="bg-gradient-to-r from-white via-blue-100 to-blue-200 bg-clip-text text-transparent">
-            May these lights guide you
+          <span className="bg-gradient-to-r from-white via-gray-600 to-gray-300 bg-clip-text text-transparent">
+            Powering Your Future with 
           </span>
           <br />
-          <span className="bg-gradient-to-r from-blue-200 via-white to-blue-100 bg-clip-text text-transparent">
-            on your path
+          <span className="bg-gradient-to-r from-gray-600 via-white to-blue-100 bg-clip-text text-transparent">
+            Solvolt Energy
           </span>
         </motion.h1>
 
@@ -38,10 +38,9 @@ export function HeroContent() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }}
-          className="text-lg md:text-xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed"
+          className="text-sm md:text-lg text-gray-400 font-light mb-12 max-w-2xl mx-auto leading-relaxed"
         >
-          Experience the future of web development with cutting-edge solutions
-          that illuminate your digital journey.
+          International power solutions with UPS systems, solar panels, inverters, and batteries for a sustainable tomorrow
         </motion.p>
 
         {/* Buttons */}
@@ -85,6 +84,7 @@ export function HeroContent() {
 export default function Hero() {
   return (
     <div className="relative h-screen  bg-slate-900 overflow-hidden  flex flex-col justify-center items-center ">
+      <div className="h-12 w-full z-30 absolute -bottom-12 bg-gradient-to-t from-[#121212] via-[#0e0e0e] to-transparent -translate-y-8"></div>
       {/* DotScreenShader as base background layer */}
       <div className="absolute inset-0 w-full h-full">
         <DotScreenShader theme="dark" />

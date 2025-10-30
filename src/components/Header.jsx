@@ -9,7 +9,7 @@ const Header = () => {
   const navItems = [
     {
       label: 'Services',
-      bgColor: '#1e293b',
+      bgColor: '#',
       textColor: '#ffffff',
       links: [
         { label: 'Web Development', href: '/services', ariaLabel: 'Web Development Services' },
@@ -19,7 +19,7 @@ const Header = () => {
     },
     {
       label: 'Solutions',
-      bgColor: '#0f172a',
+      bgColor: '#',
       textColor: '#ffffff',
       links: [
         { label: 'E-commerce', href: '/services', ariaLabel: 'E-commerce Solutions' },
@@ -29,7 +29,7 @@ const Header = () => {
     },
     {
       label: 'Company',
-      bgColor: '#334155',
+      bgColor: '#',
       textColor: '#ffffff',
       links: [
         { label: 'About Us', href: '/about', ariaLabel: 'About Solvolt' },
@@ -45,7 +45,7 @@ const Header = () => {
         logo="/vite.svg"
         logoAlt="Solvolt Logo"
         items={navItems}
-        className="backdrop-blur-md rounded-xl"
+        className="backdrop-blur-xl rounded-xl"
         baseColor="rgba(0,0,0,0.15)"
         menuColor="#ffffff"
         buttonBgColor="#3b82f6"
