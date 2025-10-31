@@ -152,18 +152,18 @@ const CardNav = ({
 
   return (
     <div
-      className={`card-nav-container rounded-xl absolute left-1/2 -translate-x-1/2 w-[95%] max-w-[800px] z-[99] top-[0.1rem] md:top-[2rem] ${className}`}>
+      className={`card-nav-container rounded-xl absolute left-1/2 -translate-x-1/2 w-[95%] max-w-[7xl] z-[99] top-[0.1rem] md:top-[2rem] ${className}`}>
       <nav
         ref={navRef}
         className={`card-nav ${isExpanded ? 'open' : ''} border ${isScrolled ? 'border-none' : 'border-neutral-900'} block h-[60px] p-0 rounded-xl shadow-md relative overflow-hidden will-change-[height]`}
         style={{ backgroundColor: baseColor }}>
         <div
-          className="card-nav-top rounded-xl absolute inset-x-0 top-0 h-[60px] flex items-center justify-between p-2 pl-[1.1rem] z-[2]">
+          className="card-nav-top rounded-xl absolute inset-x-0 top-0 h-[60px] flex items-center justify-between pr-2  z-[2]">
 
             {/* data-card-nav-logo */}
           <div
             className="logo-container ">
-            <img src={logo} alt={logoAlt} className="logo h-[28px]" />
+            <img src={'./logo.png'} alt={logoAlt} className="logo h-32 mt-2" />
           </div>
     {/* data-card-nav-hamburger-menu */}
         <div

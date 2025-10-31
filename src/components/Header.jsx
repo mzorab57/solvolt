@@ -40,7 +40,7 @@ const Header = () => {
   ];
 
   return (
-    <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-4xl px-4">
+    <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-7xl px-4">
       <CardNav
         logo="/vite.svg"
         logoAlt="Solvolt Logo"
