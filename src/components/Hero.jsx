@@ -84,7 +84,7 @@ export function HeroContent() {
 export default function Hero() {
   return (
     <div className="relative h-screen  bg-slate-900 overflow-hidden  flex flex-col justify-center items-center ">
-      <div className="h-12 w-full z-30 absolute -bottom-12 bg-gradient-to-t from-[#121212] via-[#0e0e0e] to-transparent -translate-y-8"></div>
+      {/* <div className="h-12 w-full z-30 absolute -bottom-12 bg-gradient-to-t from-[#121212] via-[#0e0e0e] to-transparent -translate-y-8"></div> */}
       {/* DotScreenShader as base background layer */}
       <div className="absolute inset-0 w-full h-full">
         <DotScreenShader theme="dark" />
