@@ -11,6 +11,7 @@ const CircularGallery = React.forwardRef(
     const [isScrolling, setIsScrolling] = useState(false);
     const scrollTimeoutRef = useRef(null);
     const animationFrameRef = useRef(null);
+    const containerRef = useRef(null);
 
     // Effect to handle scroll-based rotation
     useEffect(() => {
@@ -61,11 +62,18 @@ const CircularGallery = React.forwardRef(
       };
     }, [isScrolling, autoRotateSpeed, rotationExternal]);
 
+    const effectiveRotation = rotationExternal ?? rotation;
+    const effectiveRadius = radius;
     const anglePerItem = 360 / items.length;
     
     return (
       <div
-        ref={ref}
+        ref={(node) => {
+          // merge forwarded ref and local ref
+          if (typeof ref === 'function') ref(node);
+          else if (ref) ref.current = node;
+          containerRef.current = node;
+        }}
         role="region"
         aria-label="Circular 3D Gallery"
         className={cn("relative w-full h-full flex items-center justify-center", className)}
@@ -74,12 +82,13 @@ const CircularGallery = React.forwardRef(
         <div
           className="relative w-full h-full"
           style={{
-            transform: `rotateY(${(rotationExternal ?? rotation)}deg)`,
+            transform: `rotateY(${effectiveRotation}deg)`,
             transformStyle: 'preserve-3d',
+            willChange: 'transform'
           }}>
           {items.map((item, i) => {
             const itemAngle = i * anglePerItem;
-            const totalRotation = (rotationExternal ?? rotation) % 360;
+            const totalRotation = effectiveRotation % 360;
             const relativeAngle = (itemAngle + totalRotation + 360) % 360;
             const normalizedAngle = Math.abs(relativeAngle > 180 ? 360 - relativeAngle : relativeAngle);
             const opacity = Math.max(0.3, 1 - (normalizedAngle / 180));
@@ -91,7 +100,7 @@ const CircularGallery = React.forwardRef(
                 aria-label={item.common}
                 className="absolute w-[300px] h-[400px]"
                 style={{
-                  transform: `rotateY(${itemAngle}deg) translateZ(${radius}px)`,
+                  transform: `rotateY(${itemAngle}deg) translateZ(${effectiveRadius}px)`,
                   left: '50%',
                   top: '50%',
                   marginLeft: '-150px',
@@ -100,7 +109,7 @@ const CircularGallery = React.forwardRef(
                   transition: 'opacity 0.3s linear'
                 }}>
                 <div
-                  className="relative w-full h-full rounded-lg shadow-2xl  group border border-border bg-card/70 dark:bg-card/30 backdrop-blur-lg">
+                  className="relative w-full h-full rounded-lg shadow-2xl overflow-hidden group border border-border bg-card/70 dark:bg-card/30 backdrop-blur-lg">
                   <img
                     src={item.photo.url}
                     alt={item.photo.text}

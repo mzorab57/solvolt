@@ -127,20 +127,14 @@ const Gallery = () => {
   return (
     <section ref={sectionRef} className="relative h-[200vh] bg-white">
       <div
-        className="sticky top-0 h-screen bg-white outline-none"
+        className="sticky top-0 h-[100svh] bg-white outline-none overscroll-contain touch-none select-none overflow-hidden"
         onWheel={onWheel}
         onTouchStart={onTouchStart}
         onTouchMove={onTouchMove}
-        onKeyDown={onKeyDown}
-        tabIndex={0}
+        role="region"
+        aria-label="Interactive circular gallery section"
       >
-        {/* ڕێنمای پیشکەوتن بە شێوەی بارێکی بەستەراو */}
-        <div className="absolute top-0 left-0 w-full h-1 bg-black/10">
-          <div
-            className="h-1 bg-blue-500"
-            style={{ width: `${Math.round(progress * 100)}%`, transition: 'width 120ms linear' }}
-          />
-        </div>
+        {/* Removed progress bar to revert visual design; scroll-lock logic remains */}
         <CircularGallery
           items={items}
           className="w-full h-full"
