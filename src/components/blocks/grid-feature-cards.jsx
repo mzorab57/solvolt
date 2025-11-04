@@ -10,17 +10,18 @@ export function FeatureCard({
 
 	return (
         <div className={cn('relative overflow-hidden p-6', className)} {...props}>
+            
             <div
-                className="pointer-events-none absolute top-0 left-1/2 -mt-2 -ml-20 h-full w-full [mask-image:linear-gradient(white,transparent)]">
+                className="pointer-events-none absolute top-0 left-1/4 -mt-2 -ml-20 h-full w-full [mask-image:linear-gradient(black,transparent)]">
 				<div
-                    className="from-foreground/5 to-foreground/1 absolute inset-0 bg-gradient-to-r [mask-image:radial-gradient(farthest-side_at_top,white,transparent)] opacity-100">
+                    className="from-foreground/5 -skew-x-12  to-foreground/20 absolute inset-0 bg-gradient-to-r [mask-image:radial-gradient(farthest-side_at_top,white,transparent)] opacity-100">
 					<GridPattern
                         width={20}
                         height={20}
-                        x="-12"
+                        x="-16"
                         y="4"
                         squares={p}
-                        className="fill-foreground/5 stroke-foreground/25 absolute inset-0 h-full w-full mix-blend-overlay" />
+                        className="fill-foreground/5 stroke-foreground/25  absolute inset-0 h-full w-full mix-blend-overlay" />
 				</div>
 			</div>
             <feature.icon className="text-foreground/75 size-6" strokeWidth={1} aria-hidden />

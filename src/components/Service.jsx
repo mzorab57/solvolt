@@ -46,7 +46,8 @@ const services = [
 
 const Service = () => {
   return (
-    <section className="relative min-h-screen bg-white py-20 overflow-hidden">
+    <section className="relative  bg-white pt-20 overflow-hidden">
+        
       {/* Background Decorations */}
       {/* <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-indigo-600/20  blur-3xl"></div>
@@ -55,6 +56,9 @@ const Service = () => {
       </div> */}
 
       <div className="relative z-10 max-w-7xl mx-auto px-4  sm:px-6 lg:px-8">
+         <span className="block mb-4 pl-1 text-xs md:text-sm text-primary font-medium">
+          Our Services ?
+        </span>
         {/* Header Section */}
         <div className="text-center mb-16">
          
@@ -76,7 +80,7 @@ const Service = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1  mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-5  mb-16">
           {services.map((service, index) => (
             <div
               key={index}
@@ -86,11 +90,11 @@ const Service = () => {
               
               <FeatureCard
                 feature={service}
-                className="relative bg-white/80 backdrop-blur-sm border border-white/50 rounded shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 group"
+                className="relative bg-white/80 backdrop-blur-sm border border-white/50  shadow-md hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 group"
               />
               
               {/* Hover Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary-primary/20 to-primary-primary/5 rounded opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+              {/* <div className="absolute inset-0 bg-gradient-to-br from-black to-black/10 rounded opacity-0 group-hover:opacity-100 transition-all duration-300"></div> */}
             </div>
           ))}
         </div>

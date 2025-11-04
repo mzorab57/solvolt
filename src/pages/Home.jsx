@@ -1,8 +1,10 @@
 import Hero from '../components/Hero';
 import Service from '../components/Service';
-import Technologies from '../components/Technologies';
+import Technologie from '../components/Technologie';
 import Partners from '../components/Partners';
 import { Story } from '../components/Story';
+import Project from '@/components/Project';
+import Gallery from '@/components/Gallery';
 
 const Home = () => {
   return (
@@ -10,7 +12,9 @@ const Home = () => {
       <Hero />
       <Story />
       <Service />
-      <Technologies />
+      <Project />
+      <Technologie />
+      <Gallery />
       <Partners />
     </div>
   );
