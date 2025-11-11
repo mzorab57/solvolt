@@ -58,105 +58,32 @@ const Partners = () => {
   ];
 
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-white py-24">
       <div className="container-custom">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+        <div className="text-start mb-16">
+          <h2 className="text-4xl md:text-6xl font-semibold  bg-gradient-to-r from-primary-primary via-primary/80 to-gray-300 bg-clip-text text-transparent">
             Our Partners
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-start font-light text-gray-500  max-w-3xl py-2 ">
             We collaborate with leading global brands to bring you the best power solutions 
             and cutting-edge technology in the energy sector.
           </p>
         </div>
-
-        {/* Partners Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mb-16">
-          {partners.map((partner, index) => (
-            <div
-              key={index}
-              className="group bg-gray-50 rounded-lg p-6 hover:bg-white hover:shadow-lg transition-all duration-300 flex items-center justify-center"
-            >
-              <div className="opacity-70 group-hover:opacity-100 transition-opacity duration-300">
-                {partner.logo}
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Partnership Benefits */}
-        <div className="bg-gradient-to-r from-primary-50 to-secondary-50 rounded-2xl p-8 md:p-12">
-          <div className="text-center mb-12">
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-              Why Our Partnerships Matter
-            </h3>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Our strategic partnerships enable us to deliver world-class solutions 
-              with guaranteed quality and reliability.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">Quality Assurance</h4>
-              <p className="text-gray-600 text-sm">Products from trusted global manufacturers with proven track records.</p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">Latest Technology</h4>
-              <p className="text-gray-600 text-sm">Access to cutting-edge innovations and advanced energy solutions.</p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
-                </svg>
-              </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">Competitive Pricing</h4>
-              <p className="text-gray-600 text-sm">Direct partnerships ensure the best prices for premium products.</p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 12h.01M12 12h.01M12 12h.01" />
-                </svg>
-              </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">Global Support</h4>
-              <p className="text-gray-600 text-sm">Worldwide warranty and support network for peace of mind.</p>
+        {/* Partners Marquee (Infinite Loop) */}
+        <div className="mb-16">
+          <div className="marquee" role="region" aria-label="Partner logos marquee">
+            <div className="marquee__inner">
+              {[...partners, ...partners].map((partner, idx) => (
+                <div key={idx} className="marquee__item">
+                  {partner.logo}
+                </div>
+              ))}
             </div>
           </div>
         </div>
 
-        {/* Call to Action */}
-        <div className="text-center mt-16">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">
-            Ready to Experience Premium Quality?
-          </h3>
-          <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-            Discover how our partnerships with industry leaders can benefit your energy projects. 
-            Get in touch with our experts today.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="btn-primary">
-              View Products
-            </button>
-            <button className="btn-secondary">
-              Contact Partners Team
-            </button>
-          </div>
-        </div>
+
+      
       </div>
     </section>
   );

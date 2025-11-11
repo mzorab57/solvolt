@@ -9,7 +9,7 @@
     @apply border-border;
   }
    :root {
-     background-color: rgb(0, 0, 0);
+     /* background-color: rgb(0, 0, 0); */
     --foreground: 0 0% 3.9%;
     --card: 0 0% 100%;
     --card-foreground: 0 0% 3.9%;
@@ -71,6 +71,39 @@
     @apply border-border;
   }
   body {
-    @apply bg-black text-white;
+    /* @apply bg-black text-white; */
   }
+}
+
+/* Partners Marquee Animation */
+.marquee {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.marquee__inner {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: max-content;
+  animation: marquee-scroll 30s linear infinite;
+  will-change: transform;
+}
+
+.marquee__item {
+  flex: 0 0 auto;
+  min-width: 160px;
+  padding: 0.5rem 1rem;
+  opacity: 0.75;
+  transition: opacity 150ms ease;
+}
+
+.marquee__item:hover {
+  opacity: 1;
+}
+
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }

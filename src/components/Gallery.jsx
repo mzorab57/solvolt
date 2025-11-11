@@ -125,12 +125,15 @@ const Gallery = () => {
   }
 
   return (
-    <section ref={sectionRef} className="relative h-[200vh] bg-white">
+    <section ref={sectionRef} className="relative h-[200vh] bg-white/400 ">
       <div
-        className="sticky top-0 h-[100svh] bg-white outline-none overscroll-contain touch-none select-none overflow-hidden"
+        className={`sticky top-0 h-[100svh] outline-none select-none overflow-hidden ${locked ? 'overscroll-contain' : 'overscroll-auto'}`}
         onWheel={onWheel}
         onTouchStart={onTouchStart}
         onTouchMove={onTouchMove}
+        onKeyDown={onKeyDown}
+        tabIndex={0}
+        style={{ touchAction: locked ? 'none' : 'auto' }}
         role="region"
         aria-label="Interactive circular gallery section"
       >
