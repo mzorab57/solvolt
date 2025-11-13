@@ -125,9 +125,9 @@ const Gallery = () => {
   }
 
   return (
-    <section ref={sectionRef} className="relative h-[200vh] bg-gradient-to-r from-[#2dd4bf] to-[#080a0d] ">
+    <section ref={sectionRef} className="relative h-[200vh]  ">
       <div
-        className={`sticky top-0 h-[100svh] outline-none select-none overflow-hidden ${locked ? 'overscroll-contain' : 'overscroll-auto'}`}
+        className={`sticky top-40 h-[70svh] bg-gradient-to-r from-[#2dd4bf] to-[#080a0d] outline-none select-none overflow-hidden px-4 lg:px-0 ${locked ? 'overscroll-contain' : 'overscroll-auto'}`}
         onWheel={onWheel}
         onTouchStart={onTouchStart}
         onTouchMove={onTouchMove}
@@ -140,7 +140,7 @@ const Gallery = () => {
         {/* Removed progress bar to revert visual design; scroll-lock logic remains */}
         <CircularGallery
           items={items}
-          className="w-full h-full"
+          className="w-full h-fit mt-96  "
           disableWindowScroll
           rotationExternal={progress * 360}
         />

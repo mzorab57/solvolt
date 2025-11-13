@@ -88,7 +88,7 @@ const Service = () => {
               
               <FeatureCard
                 feature={service}
-                className="relative bg-white/80 backdrop-blur-sm border border-white/50  shadow-md hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 group py-12"
+                className="relative bg-white/80 backdrop-blur-sm border border-white/50  shadow-md hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 group py-6 lg:py-12"
               />
               
               {/* Hover Overlay */}
