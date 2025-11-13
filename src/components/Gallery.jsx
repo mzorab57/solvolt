@@ -125,7 +125,7 @@ const Gallery = () => {
   }
 
   return (
-    <section ref={sectionRef} className="relative h-[200vh] bg-white/400 ">
+    <section ref={sectionRef} className="relative h-[200vh] bg-gradient-to-r from-[#2dd4bf] to-[#080a0d] ">
       <div
         className={`sticky top-0 h-[100svh] outline-none select-none overflow-hidden ${locked ? 'overscroll-contain' : 'overscroll-auto'}`}
         onWheel={onWheel}

@@ -111,9 +111,9 @@ const Products = () => {
   const galleryImages = [
     { src: "https://cdn.flyonui.com/fy-assets/components/carousel/image-21.png", alt: "mountain" },
     { src: "https://cdn.flyonui.com/fy-assets/components/carousel/image-14.png", alt: "sand" },
-    { src: "https://cdn.flyonui.com/fy-assets/components/carousel/image-7.png", alt: "cloud" },
     { src: "https://cdn.flyonui.com/fy-assets/components/carousel/image-21.png", alt: "mountain" },
     { src: "https://cdn.flyonui.com/fy-assets/components/carousel/image-14.png", alt: "sand" },
+    { src: "https://cdn.flyonui.com/fy-assets/components/carousel/image-7.png", alt: "cloud" },
     { src: "https://cdn.flyonui.com/fy-assets/components/carousel/image-7.png", alt: "cloud" },
   ];
 
@@ -164,7 +164,7 @@ const Products = () => {
                     >
                       <div className="relative">
                         <HorizontalCarousel images={galleryImages} />
-                        <Badge className="absolute top-4 right-4 bg-primary text-primary-foreground">
+                        <Badge className="absolute top-4 right-4  text-primary-foreground">
                           {product.warranty} Warranty
                         </Badge>
                       </div>
@@ -174,10 +174,10 @@ const Products = () => {
                         </CardTitle>
                       </CardHeader>
                       <CardContent>
-                        <p className="text-muted-foreground mb-6 leading-relaxed">
+                        <p className="text-muted-foreground mb-3 leading-relaxed">
                           {product.description}
                         </p>
-                        <div className="space-y-2 mb-6">
+                        <div className="space-y-2 mb-3">
                           <h4 className="font-semibold text-foreground">Key Features:</h4>
                           <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                             {product.features.map((feature, idx) => (
@@ -188,9 +188,7 @@ const Products = () => {
                             ))}
                           </ul>
                         </div>
-                        {/* <Button className="w-full gap-2">
-                          Request Quote
-                        </Button> */}
+                      
                       </CardContent>
                     </Card>
                   ))}

@@ -13,7 +13,7 @@ const Card = React.forwardRef(function Card({ className, ...props }, ref) {
 Card.displayName = "Card";
 
 const CardHeader = React.forwardRef(function CardHeader({ className, ...props }, ref) {
-  return <div ref={ref} className={cn("flex flex-col space-y-1.5 p-6", className)} {...props} />;
+  return <div ref={ref} className={cn("flex flex-col space-y-1.5 p-5", className)} {...props} />;
 });
 CardHeader.displayName = "CardHeader";
 

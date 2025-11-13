@@ -94,12 +94,12 @@ export default function Hero() {
       <LightRays 
         className="absolute inset-0 top-6 md:top-12  w-full h-full"
         raysOrigin="top-center"
-        raysColor="#"
+        raysColor="#009B90"
         raysSpeed={1}
         lightSpread={1.5}
         rayLength={5}
         pulsating={true}
-        fadeDistance={1.2}
+        fadeDistance={6.2}
         saturation={1.0}
         followMouse={true}
         mouseInfluence={0.15}

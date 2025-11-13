@@ -30,7 +30,7 @@ const About = () => {
   ];
 
   return (
-    <div className="pt-20">
+    <div className="">
       {/* Hero Section */}
       <section className="gradient-bg section-padding">
         <div className="container-custom">

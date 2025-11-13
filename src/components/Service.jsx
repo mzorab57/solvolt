@@ -6,9 +6,7 @@ import {
   Globe, 
   Database, 
   Shield, 
-  Zap,
-  ArrowRight,
-  Sparkles
+  Zap
 } from 'lucide-react'
 
 const services = [
@@ -46,7 +44,7 @@ const services = [
 
 const Service = () => {
   return (
-    <section className="relative  bg-white pt-20 overflow-hidden">
+    <section className="relative  bg-white pt-28 pb-20 overflow-hidden">
         
       {/* Background Decorations */}
       {/* <div className="absolute inset-0 overflow-hidden">
@@ -55,8 +53,8 @@ const Service = () => {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-cyan-400/10 to-blue-600/10  blur-3xl"></div>
       </div> */}
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4  sm:px-6 lg:px-8">
-         <span className="block mb-4 pl-1 text-xs md:text-sm text-primary font-medium">
+      <div className="relative z-10  max-w-7xl mx-auto px-4  lg:px-8">
+         <span className="block  mb-4 ml-1 text-xs md:text-sm text-primary font-medium">
           Our Services ?
         </span>
         {/* Header Section */}
@@ -80,7 +78,7 @@ const Service = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-5  mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-5 gap-6 mb-16 ">
           {services.map((service, index) => (
             <div
               key={index}
@@ -90,7 +88,7 @@ const Service = () => {
               
               <FeatureCard
                 feature={service}
-                className="relative bg-white/80 backdrop-blur-sm border border-white/50  shadow-md hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 group"
+                className="relative bg-white/80 backdrop-blur-sm border border-white/50  shadow-md hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 group py-12"
               />
               
               {/* Hover Overlay */}

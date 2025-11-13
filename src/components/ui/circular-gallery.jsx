@@ -98,7 +98,7 @@ const CircularGallery = React.forwardRef(
                 key={item.photo.url}
                 role="group"
                 aria-label={item.common}
-                className="absolute lg:w-[300px] w-[270px] pl-5 h-[300px] lg:h-[400px] rounded-lg"
+                className="absolute lg:w-[300px]  w-[270px] pl-5 h-[300px] lg:h-[400px] rounded-lg"
                 style={{
                   transform: `rotateY(${itemAngle}deg) translateZ(${effectiveRadius}px)`,
                   left: '50%',
@@ -109,7 +109,7 @@ const CircularGallery = React.forwardRef(
                   transition: 'opacity 0.3s linear'
                 }}>
                 <div
-                  className="relative w-full h-full rounded-lg shadow-2xl overflow-hidden group border border-border bg-card/70 dark:bg-card/30 backdrop-blur-lg">
+                  className="relative w-full h-full rounded-lg shadow-2xl overflow-hidden group   backdrop-blur-lg">
                   <img
                     src={item.photo.url}
                     alt={item.photo.text}
@@ -117,10 +117,10 @@ const CircularGallery = React.forwardRef(
                     style={{ objectPosition: item.photo.pos || 'center' }} />
                   {/* Replaced text-primary-foreground with text-white for consistent color */}
                   <div
-                    className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/80 to-transparent text-white">
-                    <h2 className="text-xl font-bold">{item.common}</h2>
-                    <em className="text-sm italic opacity-80">{item.binomial}</em>
-                    <p className="text-xs mt-2 opacity-70">Photo by: {item.photo.by}</p>
+                    className="absolute bottom-0 left-0 w-full p-2   text-black/70">
+                    <h2 className="text-lg font-light bg-primary-primary/10 rounded-md px-3">{item.common}</h2>
+                    {/* <em className="text-xs  opacity-80">{item.binomial}</em> */}
+                    
                   </div>
                 </div>
               </div>

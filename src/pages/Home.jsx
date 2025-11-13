@@ -5,6 +5,7 @@ import Partners from '../components/Partners';
 import { Story } from '../components/Story';
 import Project from '@/components/Project';
 import Gallery from '@/components/Gallery';
+import WhyChooseUs from '@/components/WhyChooseUs';
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <Service />
       <Project />
       <Technologie />
+      <WhyChooseUs />
       <Gallery />
       <Partners />
     </div>

@@ -2,6 +2,7 @@ import { useLayoutEffect, useRef, useState, useEffect } from 'react';
 import { gsap } from 'gsap';
 // use your own icon import if react-icons is not available
 import { GoArrowUpRight } from 'react-icons/go';
+import { useLocation } from 'react-router-dom';
 
 const CardNav = ({
   logo,
@@ -20,6 +21,7 @@ const CardNav = ({
   const navRef = useRef(null);
   const cardsRef = useRef([]);
   const tlRef = useRef(null);
+  const location = useLocation();
 
   const calculateHeight = () => {
     const navEl = navRef.current;
@@ -152,13 +154,13 @@ const CardNav = ({
 
   return (
     <div
-      className={`card-nav-container rounded-xl absolute left-1/2 -translate-x-1/2 w-[95%] max-w-[7xl] z-[99] top-[0.1rem] md:top-[2rem] ${className}`}>
+      className={`card-nav-container rounded absolute left-1/2 -translate-x-1/2 w-[95%] max-w-[7xl] z-[99] top-[0.1rem] md:top-[2rem] ${className}`}>
       <nav
         ref={navRef}
-        className={`card-nav ${isExpanded ? 'open' : ''} border ${isScrolled ? 'border-none' : 'border-neutral-900'} block h-[60px] p-0 rounded-xl shadow-md relative overflow-hidden will-change-[height]`}
+        className={`card-nav ${isExpanded ? 'open' : ''} ${location.pathname === '/' ? 'border-neutral-900 ' : ''}  ${isScrolled ? 'border-none ' : 'border-neutral-900 '} block h-[60px] p-0 rounded-lg  shadow-md relative overflow-hidden will-change-[height]`}
         style={{ backgroundColor: baseColor }}>
         <div
-          className="card-nav-top rounded-xl absolute inset-x-0 top-0 h-[60px] flex items-center justify-between pr-2  z-[2]">
+          className="card-nav-top rounded absolute inset-x-0 top-0 h-[60px] flex items-center justify-between pr-2  z-[2]">
 
             {/* data-card-nav-logo */}
           <div
@@ -198,7 +200,7 @@ const CardNav = ({
           {(items || []).slice(0, 3).map((item, idx) => (
             <div
               key={`${item.label}-${idx}`}
-              className={`nav-card select-none  backdrop-blur-3xl  ${isScrolled ? ' text-black/60    ' : ' bg-white/5 text-gray-300'} relative flex flex-col gap-2 p-[12px_16px] rounded-[calc(0.75rem-0.2rem)] min-w-0 flex-[1_1_auto] h-auto min-h-[60px] md:h-full md:min-h-0 md:flex-[1_1_0%]`}
+              className={`nav-card select-none  backdrop-blur-3xl   bg-primary-primary/20  text-gray-100 relative flex flex-col gap-2 p-[12px_16px] rounded-[calc(0.75rem-0.2rem)] min-w-0 flex-[1_1_auto] h-auto min-h-[60px] md:h-full md:min-h-0 md:flex-[1_1_0%]`}
               ref={setCardRef(idx)}
               style={{ backgroundColor: item.bgColor}}>
               <div

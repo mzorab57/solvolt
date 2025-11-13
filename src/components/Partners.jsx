@@ -58,7 +58,7 @@ const Partners = () => {
   ];
 
   return (
-    <section className="section-padding bg-white py-24">
+    <section className="section-padding bg-white py-28">
       <div className="container-custom">
         <div className="text-start mb-16">
           <h2 className="text-4xl md:text-6xl font-semibold  bg-gradient-to-r from-primary-primary via-primary/80 to-gray-300 bg-clip-text text-transparent">

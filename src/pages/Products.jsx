@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Package, Filter, Star, Zap, DollarSign, Award, ShoppingCart, ArrowRight, Search } from 'lucide-react';
-import productHero from "/assets/images/generated.png";
+import { Package, Filter, Zap, ArrowRight, Search } from 'lucide-react';
+import productHero from "/assets/images/bgproduct.jpg";
 
 // Static dataset: products for filters and cards
 const STATIC_PRODUCTS = [
@@ -13,7 +13,7 @@ const STATIC_PRODUCTS = [
     price: 9000,
     warranty: '8 Years',
     rating: 4.8,
-    image_url: null,
+    image_url: "https://cdn.flyonui.com/fy-assets/components/carousel/image-21.png",
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ const STATIC_PRODUCTS = [
     price: 2800,
     warranty: '5 Years',
     rating: 4.8,
-    image_url: null,
+    image_url: "https://cdn.flyonui.com/fy-assets/components/carousel/image-14.png",
   },
   {
     id: 3,
@@ -35,7 +35,7 @@ const STATIC_PRODUCTS = [
     price: 1200,
     warranty: '5 Years',
     rating: 4.8,
-    image_url: null,
+    image_url: "https://cdn.flyonui.com/fy-assets/components/carousel/image-14.png",
   },
   {
     id: 4,
@@ -46,7 +46,7 @@ const STATIC_PRODUCTS = [
     price: 5000,
     warranty: '10 Years',
     rating: 4.8,
-    image_url: null,
+    image_url: "https://cdn.flyonui.com/fy-assets/components/carousel/image-21.png",
   },
   {
     id: 5,
@@ -57,7 +57,7 @@ const STATIC_PRODUCTS = [
     price: 250,
     warranty: '25 Years',
     rating: 4.8,
-    image_url: null,
+    image_url: "https://cdn.flyonui.com/fy-assets/components/carousel/image-21.png",
   },
   {
     id: 6,
@@ -68,7 +68,7 @@ const STATIC_PRODUCTS = [
     price: 4500,
     warranty: '3 Years',
     rating: 4.8,
-    image_url: null,
+    image_url: "https://cdn.flyonui.com/fy-assets/components/carousel/image-21.png",
   },
 ];
 
@@ -78,7 +78,6 @@ export default function Products() {
   const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
-  const [sortBy, setSortBy] = useState('name');
 
   useEffect(() => {
     // Initialize with static dataset
@@ -101,14 +100,9 @@ export default function Products() {
       );
     }
 
-    if (sortBy === 'price') {
-      result = [...result].sort((a, b) => a.price - b.price);
-    } else {
-      result = [...result].sort((a, b) => a.name.localeCompare(b.name));
-    }
 
     setFilteredProducts(result);
-  }, [filter, searchTerm, sortBy, products]);
+  }, [filter, searchTerm, products]);
 
   const categories = ['all', ...Array.from(new Set(products.map((p) => p.category))).filter(Boolean)];
 
@@ -119,7 +113,7 @@ export default function Products() {
         <div className="relative hidden lg:block">
           <div
             style={{ backgroundImage: `url(${productHero})` }}
-            className="absolutev aspect-auto lg:aspect-[4/1] inset-0 bg-cover bg-center"
+            className="absolutev aspect-auto lg:aspect-[3/1] inset-0 bg-cover bg-center"
           ></div>
         </div>
         <div className="relative lg:hidden">
@@ -148,16 +142,7 @@ export default function Products() {
                 />
               </div>
 
-              <div className="flex gap-3">
-                <select
-                  value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value)}
-                  className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent outline-none transition-all"
-                >
-                  <option value="name">Sort by Name</option>
-                  <option value="price">Sort by Price</option>
-                </select>
-              </div>
+            
             </div>
 
             <div className="flex flex-wrap gap-3">
@@ -165,9 +150,9 @@ export default function Products() {
                 <button
                   key={category}
                   onClick={() => setFilter(category)}
-                  className={`px-4 py-2 rounded-full font-medium transition-all flex items-center space-x-2 capitalize ${
+                  className={`px-4 py-2 rounded font-medium transition-all flex items-center space-x-2 capitalize ${
                     filter === category
-                      ? 'bg-gradient-to-r from-emerald-600 to-teal-600 text-white shadow-lg'
+                      ? 'bg-gradient-to-r from-primary-primary to-primary-primary/80 text-white shadow-lg'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                   }`}
                 >
@@ -186,7 +171,7 @@ export default function Products() {
             {loading ? (
               <div className="flex items-center justify-center py-20">
                 <div className="text-center">
-                  <div className="w-12 h-12 border-4 border-emerald-200 border-t-emerald-600 rounded-full animate-spin mx-auto mb-4"></div>
+                  <div className="w-12 h-12 border-4 border-primary-primary border-t-primary-primary/50 rounded animate-spin mx-auto mb-4"></div>
                   <p className="text-gray-600">Loading products...</p>
                 </div>
               </div>
@@ -200,9 +185,9 @@ export default function Products() {
                 {filteredProducts.map((product) => (
                   <div
                     key={product.id}
-                    className="group bg-white rounded-2xl border border-gray-200 hover:border-emerald-300 overflow-hidden hover:shadow-2xl transition-all"
+                    className="group bg-white rounded border border-gray-200 hover:border-primary-primary overflow-hidden hover:shadow-xl transition-all"
                   >
-                    <div className="relative h-56 overflow-hidden bg-gradient-to-br from-emerald-100 to-teal-100">
+                    <div className="relative h-56 overflow-hidden bg-gradient-to-br from-primary-primary/10 to-primary-primary/30">
                       {product.image_url ? (
                         <img
                           src={product.image_url}
@@ -211,23 +196,21 @@ export default function Products() {
                         />
                       ) : (
                         <div className="w-full h-full flex items-center justify-center">
-                          <Package className="w-16 h-16 text-emerald-300" />
+                          <Package className="w-16 h-16 text-primary-primary" />
                         </div>
                       )}
 
-                      <div className="absolute top-4 right-4 flex items-center space-x-1 bg-white/95 backdrop-blur-sm px-3 py-1 rounded-full">
-                        <Star className="w-4 h-4 text-amber-500 fill-amber-500" />
-                        <span className="text-sm font-semibold text-gray-700">{product.rating ?? 4.8}</span>
-                      </div>
-
+                    
+                     {/* category tag */}
                       <div className="absolute top-4 left-4">
-                        <span className="inline-flex items-center space-x-1 bg-emerald-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                        <span className="inline-flex items-center space-x-1 bg-primary-primary/30 text-white px-3 py-1 rounded text-xs font-light">
                           <Zap className="w-3 h-3" />
                           <span>{product.category}</span>
                         </span>
                       </div>
                     </div>
 
+                    {/* text */}
                     <div className="p-6">
                       <h3 className="text-lg font-bold text-gray-900 mb-2 line-clamp-2">{product.name}</h3>
                       <p className="text-gray-600 text-sm mb-4 line-clamp-2">{product.description}</p>
@@ -236,7 +219,7 @@ export default function Products() {
                         <div className="mb-4 space-y-2">
                           {product.features.slice(0, 3).map((feature, idx) => (
                             <div key={idx} className="flex items-center space-x-2 text-sm text-gray-600">
-                              <div className="w-1.5 h-1.5 rounded-full bg-emerald-600"></div>
+                              <div className="w-1.5 h-1.5 rounded-full bg-primary-primary"></div>
                               <span>{feature}</span>
                             </div>
                           ))}
@@ -246,26 +229,9 @@ export default function Products() {
                         </div>
                       )}
 
-                      <div className="border-t border-gray-200 pt-4 mb-4">
-                        <div className="flex items-center justify-between mb-3">
-                          <div className="flex items-center space-x-2">
-                            <DollarSign className="w-5 h-5 text-emerald-600" />
-                            <span className="text-2xl font-bold text-gray-900">{Number(product.price || 0).toLocaleString()}</span>
-                          </div>
-                          {product.warranty && (
-                            <div className="flex items-center space-x-1 text-sm text-gray-600 bg-gray-50 px-3 py-1 rounded-lg">
-                              <Award className="w-4 h-4" />
-                              <span>{product.warranty}</span>
-                            </div>
-                          )}
-                        </div>
-                      </div>
+                     
 
-                      <button className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold py-3 rounded-lg hover:shadow-lg hover:scale-105 transition-all flex items-center justify-center space-x-2 group/btn">
-                        <ShoppingCart className="w-5 h-5 group-hover/btn:rotate-12 transition-transform" />
-                        <span>View Details</span>
-                        <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                      </button>
+                     
                     </div>
                   </div>
                 ))}
@@ -275,25 +241,7 @@ export default function Products() {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-r from-emerald-600 to-teal-600 text-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-6">
-              Need a Custom Solution?
-            </h2>
-            <p className="text-xl text-emerald-50 mb-8">
-              Contact our experts to design the perfect power solution for your specific needs
-            </p>
-            <a
-              href="/contact"
-              className="inline-flex items-center justify-center px-8 py-4 bg-white text-emerald-700 font-semibold rounded-xl hover:shadow-xl hover:scale-105 transition-all"
-            >
-              Contact Our Team
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </a>
-          </div>
-        </div>
-      </section>
+     
     </div>
   );
 }

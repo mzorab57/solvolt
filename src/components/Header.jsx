@@ -12,19 +12,19 @@ const Header = () => {
       bgColor: '#',
       textColor: '#ffffff',
       links: [
-        { label: 'Web Development', href: '/services', ariaLabel: 'Web Development Services' },
-        { label: 'Mobile Apps', href: '/services', ariaLabel: 'Mobile App Development' },
-        { label: 'UI/UX Design', href: '/services', ariaLabel: 'UI/UX Design Services' }
+        { label: 'Exceptional Services', href: '/services', ariaLabel: 'Exceptional Services' },
+        { label: 'Advanced Technologies', href: '/services', ariaLabel: 'Advanced Technologies' },
+        { label: 'Partnerships', href: '/services', ariaLabel: 'Partnerships' }
       ]
     },
     {
-      label: 'Solutions',
+      label: 'Portfolio',
       bgColor: '#',
       textColor: '#ffffff',
       links: [
-        { label: 'E-commerce', href: '/services', ariaLabel: 'E-commerce Solutions' },
-        { label: 'Enterprise', href: '/services', ariaLabel: 'Enterprise Solutions' },
-        { label: 'Startups', href: '/services', ariaLabel: 'Startup Solutions' }
+        { label: 'Projects', href: '/projects', ariaLabel: 'Projects' },
+        { label: 'Products', href: '/products', ariaLabel: 'Products' },
+        { label: 'Videos', href: '/videos', ariaLabel: 'Videos' }
       ]
     },
     {
@@ -34,7 +34,7 @@ const Header = () => {
       links: [
         { label: 'About Us', href: '/about', ariaLabel: 'About Solvolt' },
         { label: 'Contact', href: '/contact', ariaLabel: 'Contact Us' },
-        { label: 'Careers', href: '/about', ariaLabel: 'Career Opportunities' }
+        { label: 'Why Choose', href: '/why-choose', ariaLabel: 'Why Choose Solvolt' },
       ]
     }
   ];
@@ -45,8 +45,8 @@ const Header = () => {
         logo="/vite.svg"
         logoAlt="Solvolt Logo"
         items={navItems}
-        className="backdrop-blur-xl rounded-xl"
-        baseColor="rgba(0,0,0,0.15)"
+        className="backdrop-blur-xl rounded"
+        baseColor="rgba(0, 155, 144,0.15)"
         menuColor="#ffffff"
         buttonBgColor="#3b82f6"
         buttonTextColor="#ffffff"

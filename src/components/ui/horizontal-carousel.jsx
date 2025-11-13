@@ -16,7 +16,8 @@ const Thumb = ({ src, alt, active, onClick }) => (
 
 export function HorizontalCarousel({ images = [], className = "" }) {
   const [index, setIndex] = useState(0);
-  const [loaded, setLoaded] = useState(false);
+  // Start as loaded so first image is visible immediately on mount
+  const [loaded, setLoaded] = useState(true);
   const trackRef = useRef(null);
 
   const items = useMemo(
@@ -25,6 +26,7 @@ export function HorizontalCarousel({ images = [], className = "" }) {
   );
 
   useEffect(() => {
+    // When changing image, fade in after load
     setLoaded(false);
   }, [index]);
 
@@ -49,12 +51,18 @@ export function HorizontalCarousel({ images = [], className = "" }) {
     <div className={`relative w-full ${className}`}>
       <div className="relative rounded-lg overflow-hidden bg-black/5">
         <div className="aspect-square sm:aspect-video">
-          <img
-            src={items[index]?.src}
-            alt={items[index]?.alt}
-            className={`size-full object-cover transition-opacity duration-300 ${loaded ? "opacity-100" : "opacity-0"}`}
-            onLoad={() => setLoaded(true)}
-          />
+          {items.length > 0 ? (
+            <img
+              src={items[index]?.src}
+              alt={items[index]?.alt}
+              className={`size-full object-cover transition-opacity duration-300 ${loaded ? "opacity-100" : "opacity-0"}`}
+              onLoad={() => setLoaded(true)}
+            />
+          ) : (
+            <div className="size-full flex items-center justify-center bg-black/5 text-muted-foreground">
+              No images
+            </div>
+          )}
         </div>
 
         {/* Controls */}
