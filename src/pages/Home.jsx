@@ -7,9 +7,10 @@ import Project from '@/components/Project';
 import Gallery from '@/components/Gallery';
 import WhyChooseUs from '@/components/WhyChooseUs';
 
+
 const Home = () => {
   return (
-    <div className="bg-black">
+    <div className="">
       <Hero />
       <Story />
       <Service />
@@ -17,6 +18,7 @@ const Home = () => {
       <Technologie />
       <WhyChooseUs />
       <Gallery />
+       
       <Partners />
     </div>
   );
