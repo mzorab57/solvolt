@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { CircularGallery } from './ui/circular-gallery'
+import { Sliders } from 'lucide-react'
+import Slider from './Slider'
 
 // هەمان داتاکانی ئێستا هێماندووە بێ گۆڕانکاری
 const items = [
@@ -125,9 +127,10 @@ const Gallery = () => {
   }
 
   return (
-    <section ref={sectionRef} className="relative h-[200vh] bg-black ">
+
+    <section ref={sectionRef} className="relative h-[200vh] bg-black hidden ">
       <div
-        className={`sticky top-0 h-[70svh] translate-y-24   outline-none select-none overflow-hidden ${locked ? 'overscroll-contain' : 'overscroll-auto'}`}
+        className={`sticky top-0  h-[90vh] translate-y-16   outline-none select-none overflow-hidden ${locked ? 'overscroll-contain' : 'overscroll-auto'}`}
         onWheel={onWheel}
         onTouchStart={onTouchStart}
         onTouchMove={onTouchMove}
@@ -140,12 +143,20 @@ const Gallery = () => {
         {/* Removed progress bar to revert visual design; scroll-lock logic remains */}
         <CircularGallery
           items={items}
-          className="w-full mt-10 bg-gradient-to-r from-[#464b4a] to-[#000000]"
+          className="w-full bg-gradient-to-r from-[#4e4b4b] to-[#000000]"
           disableWindowScroll
           rotationExternal={progress * 360}
         />
       </div>
+
+  
     </section>
+
+    
+
+    
+
+   
   )
 }
 

@@ -98,7 +98,7 @@ const CircularGallery = React.forwardRef(
                 key={item.photo.url}
                 role="group"
                 aria-label={item.common}
-                className="absolute lg:w-[300px]  w-[270px] pl-5 h-[300px] lg:h-[400px] rounded-lg"
+                className="absolute bg-red-300 lg:w-[300px]  w-[250px]  h-[300px] lg:h-[400px] rounded-lg"
                 style={{
                   transform: `rotateY(${itemAngle}deg) translateZ(${effectiveRadius}px)`,
                   left: '50%',
@@ -117,8 +117,8 @@ const CircularGallery = React.forwardRef(
                     style={{ objectPosition: item.photo.pos || 'center' }} />
                   {/* Replaced text-primary-foreground with text-white for consistent color */}
                   <div
-                    className="absolute bottom-0 left-0 w-full p-2   text-black/70">
-                    <h2 className="text-lg font-light bg-primary-primary/10 rounded-md px-3">{item.common}</h2>
+                    className="absolute bottom-0 left-5 w-fit p-2   text-black/70">
+                    <h2 className="lg:text-lg text-xs font-light bg-primary-primary/10 rounded-md px-3">{item.common}</h2>
                     {/* <em className="text-xs  opacity-80">{item.binomial}</em> */}
                     
                   </div>

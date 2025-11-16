@@ -76,7 +76,7 @@ const featuredProjects = [
 
 const Project = () => {
   return (
-    <div className="relative bg-white text-white ">
+    <div id="projects" className="relative bg-white text-white ">
       {/* Hero Section with Zoom Parallax */}
         <ZoomParallax images={projectImages} />
     

@@ -44,7 +44,7 @@ const services = [
 
 const Service = () => {
   return (
-    <section className="relative  bg-white pt-28 pb-20 overflow-hidden">
+    <section id="services" className="relative  bg-white pt-28 pb-20 overflow-hidden">
         
       {/* Background Decorations */}
       {/* <div className="absolute inset-0 overflow-hidden">

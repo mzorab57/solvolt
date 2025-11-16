@@ -1,9 +1,7 @@
-import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
 import CardNav from './CardNav';
 
 const Header = () => {
-  const location = useLocation();
+  
 
   // Navigation items for CardNav
   const navItems = [
@@ -12,9 +10,9 @@ const Header = () => {
       bgColor: '#',
       textColor: '#ffffff',
       links: [
-        { label: 'Exceptional Services', href: '/services', ariaLabel: 'Exceptional Services' },
-        { label: 'Advanced Technologies', href: '/services', ariaLabel: 'Advanced Technologies' },
-        { label: 'Partnerships', href: '/services', ariaLabel: 'Partnerships' }
+        { label: 'Exceptional Services', href: '/#services', ariaLabel: 'Exceptional Services' },
+        { label: 'Advanced Technologies', href: '/#technologies', ariaLabel: 'Advanced Technologies' },
+        { label: 'Partnerships', href: '/#partners', ariaLabel: 'Partnerships' }
       ]
     },
     {
@@ -32,9 +30,9 @@ const Header = () => {
       bgColor: '#',
       textColor: '#ffffff',
       links: [
-        { label: 'About Us', href: '/about', ariaLabel: 'About Solvolt' },
-        { label: 'Contact', href: '/contact', ariaLabel: 'Contact Us' },
-        { label: 'Why Choose', href: '/why-choose', ariaLabel: 'Why Choose Solvolt' },
+        { label: 'About Us', href: '/#story', ariaLabel: 'About Solvolt' },
+        { label: 'Contact', href: '/#contact', ariaLabel: 'Contact Us' },
+        { label: 'Why Choose', href: '/#why-choose-us', ariaLabel: 'Why Choose Solvolt' },
       ]
     }
   ];

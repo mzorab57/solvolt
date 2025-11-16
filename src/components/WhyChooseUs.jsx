@@ -21,7 +21,7 @@ const features = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="pb-44 pt-12 bg-white">
+    <section id="why-choose-us" className="pb-44 pt-12 bg-white">
       <div className="container max-w-7xl mx-auto px-4 lg:px-8">
         <div className="max-w-3xl  mb-10">
           <h2 className="text-4xl md:text-6xl font-semibold  bg-gradient-to-r from-primary-primary via-primary/80 to-gray-300 bg-clip-text text-transparent">Why Choose Solvolt?</h2>

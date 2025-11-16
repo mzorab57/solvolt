@@ -6,9 +6,24 @@ import { Story } from '../components/Story';
 import Project from '@/components/Project';
 import Gallery from '@/components/Gallery';
 import WhyChooseUs from '@/components/WhyChooseUs';
+import Slider from '@/components/Slider';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
 
 
 const Home = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (!location.hash) return;
+    const id = location.hash.slice(1);
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, [location]);
+
   return (
     <div className="">
       <Hero />
@@ -17,8 +32,8 @@ const Home = () => {
       <Project />
       <Technologie />
       <WhyChooseUs />
-      <Gallery />
-       
+      {/* <Gallery /> */}
+      <Slider />
       <Partners />
     </div>
   );

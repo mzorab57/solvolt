@@ -355,7 +355,7 @@ const Technologie = () => {
   ]
 
   return (
-    <div className="min-h-screen bg-white relative overflow-hidden">
+    <div id="technologies" className="min-h-screen bg-white relative overflow-hidden">
       {/* <FloatingParticles /> */}
       
       {/* Header Section */}
