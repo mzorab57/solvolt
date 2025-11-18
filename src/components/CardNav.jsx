@@ -161,7 +161,7 @@ const CardNav = ({
 
   return (
     <div
-      className={`card-nav-container rounded absolute left-1/2 -translate-x-1/2 w-[95%] max-w-[7xl] z-[99] top-[0.1rem] md:top-[2rem] ${className}`}>
+      className={`card-nav-container rounded absolute left-1/2 -translate-x-1/2 w-[95%] max-w-[7xl] z-[99]  ${className}`}>
       <nav
         ref={navRef}
         className={`card-nav ${isExpanded ? 'open' : ''} ${location.pathname === '/' ? 'border-neutral-900 ' : ''}  ${isScrolled ? 'border-none ' : 'border-neutral-900 '} block h-[60px] p-0 rounded-lg  shadow-md relative overflow-hidden will-change-[height]`}
@@ -220,7 +220,7 @@ const CardNav = ({
                     key={`${lnk.label}-${i}`}
                     className="nav-card-link inline-flex items-center gap-[6px] no-underline cursor-pointer transition-opacity duration-300 hover:opacity-75 text-[15px] md:text-[16px] float-right"
                     to={lnk.href}
-                    
+
                     aria-label={lnk.ariaLabel}
                     onClick={handleNavigate}
                   >

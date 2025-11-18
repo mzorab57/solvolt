@@ -3,37 +3,37 @@ const Partners = () => {
     {
       name: "Interlight",
       logo: (
-        <img src="/logo.png" alt="Interlight" className="w-full h-20" />
+        <img src="/logo.png" alt="Interlight" className="w-32 h-20" />
       )
     },
     {
       name: "Eternity",
       logo: (
-        <img src="/logo.png" alt="Eternity" className="w-full h-20" />
+        <img src="/logo.png" alt="Eternity" className="w-32 h-20" />
       )
     },
     {
       name: "Seraphim",
       logo: (
-        <img src="/logo.png" alt="Seraphim" className="w-full h-20" />
+        <img src="/logo.png" alt="Seraphim" className="w-32 h-20" />
       )
     },
     {
       name: "Deye",
       logo: (
-        <img src="/logo.png" alt="Deye" className="w-full h-20" />
+        <img src="/logo.png" alt="Deye" className="w-32 h-20" />
       )
     },
     {
       name: "EVE",
       logo: (
-        <img src="/logo.png" alt="EVE" className="w-full h-20" />
+        <img src="/logo.png" alt="EVE" className="w-32 h-20" />
       )
     },
     {
       name: "Growatt",
       logo: (
-        <img src="/logo.png" alt="Growatt" className="w-full h-20" />
+        <img src="/logo.png" alt="Growatt" className="w-32 h-20" />
       )
     }
   ];

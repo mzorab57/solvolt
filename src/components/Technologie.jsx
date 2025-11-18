@@ -14,7 +14,7 @@ const Technologie = () => {
           <div className="relative group">
             <div className="absolute inset-0 rounded group-hover:blur-2xl transition-all duration-500"></div>
             <div className="relative pt-8 bg-black/5  p-8 rounded-2xl h-full">
-              <div className="flex  items-center gap-4 mb-6">
+              <div className="flex  items-center gap-4 mb-2 lg:mb-6">
                 {/* <div className="p-4 bg-gradient-to-br from-primary-primary/20 to-cyan-500/20 rounded-xl">
                   <Zap className="w-8 h-8 text-black" />
                 </div> */}
@@ -27,7 +27,7 @@ const Technologie = () => {
                 </div>
               </div>
               
-              <p className="text-gray-700 mb-6 leading-relaxed">
+              <p className="text-gray-700 mb-3 lg:mb-6 leading-relaxed">
                High-efficiency power conversion systems
               </p>
 
@@ -129,7 +129,7 @@ const Technologie = () => {
           <div className="relative group">
             <div className="absolute inset-0 rounded group-hover:blur-2xl transition-all duration-500"></div>
             <div className="relative pt-8 bg-black/5  p-8 rounded-2xl h-full">
-              <div className="flex  items-center gap-4 mb-6">
+              <div className="flex  items-center gap-4 mb-2 lg:mb-6">
                 {/* <div className="p-4 bg-gradient-to-br from-primary-primary/20 to-cyan-500/20 rounded-xl">
                   <Zap className="w-8 h-8 text-black" />
                 </div> */}
@@ -142,7 +142,7 @@ const Technologie = () => {
                 </div>
               </div>
               
-              <p className="text-gray-700 mb-6 leading-relaxed">
+              <p className="text-gray-700 mb-3 lg:mb-6 leading-relaxed">
               Premium photovoltaic energy solutions
               </p>
 
@@ -244,12 +244,12 @@ const Technologie = () => {
           <div className="relative group">
             <div className="absolute inset-0 rounded group-hover:blur-2xl transition-all duration-500"></div>
             <div className="relative pt-8 bg-black/5  p-8 rounded-2xl h-full">
-              <div className="flex  items-center gap-4 mb-6">
+              <div className="flex  items-center gap-4 mb-2 lg:mb-6">
                 {/* <div className="p-4 bg-gradient-to-br from-primary-primary/20 to-cyan-500/20 rounded-xl">
                   <Zap className="w-8 h-8 text-black" />
                 </div> */}
                 <div>
-                  <h3 className="text-2xl lg:text-3xl font-bold text-black">Batteries</h3>
+                  <h3 className="text-2xl lg:text-3xl font-bold  text-black">Batteries</h3>
                   {/* <div className="flex items-center gap-2 mt-1">
                     <Gauge className="w-4 h-4 text-green-400" />
                     <span className="text-green-400 font-semibold">99.2% Efficiency</span>
@@ -257,7 +257,7 @@ const Technologie = () => {
                 </div>
               </div>
               
-              <p className="text-gray-700 mb-6 leading-relaxed">
+              <p className="text-gray-700 mb-3 lg:mb-6 leading-relaxed">
               Long-lasting energy storage systems
               </p>
 

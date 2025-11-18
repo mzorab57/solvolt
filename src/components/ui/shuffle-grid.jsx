@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import { cn } from "@/lib/utils";
+
 
 export const ShuffleHero = () => {
   return (
+    <div className="w-full">
+      <div className="h-12 w-full z-30 absolute -bottom-[3rem] bg-gradient-to-b  from-black via-black/15 to-transparent "></div>
     <section
       className="w-full bg-white   rounded lg:px-8 px-4 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 max-w-7xl mx-auto">
         
@@ -37,6 +39,7 @@ We will be your dependable partner and will constantly develop quality for the p
       </div>
       <ShuffleGrid />
     </section>
+    </div>
   );
 };
 

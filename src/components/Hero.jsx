@@ -109,6 +109,8 @@ export default function Hero() {
      
       
       <HeroContent />
+
+      {/* <div className="h-12 w-full z-50 absolute bottom-[0rem] bg-gradient-to-t  from-black via-black/15 to-transparent "></div> */}
     </div>
   );
 }
