@@ -92,7 +92,7 @@ export default function Hero() {
       
       {/* LightRays as overlay effect */}
       <LightRays 
-        className="absolute inset-0 top-6 md:top-12  w-full h-full"
+        className="absolute inset-0 top-0 md:top-12  w-full h-full"
         raysOrigin="top-center"
         raysColor="#009B90"
         raysSpeed={1}
