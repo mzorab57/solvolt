@@ -13,7 +13,7 @@ const STATIC_PRODUCTS = [
     price: 9000,
     warranty: '8 Years',
     rating: 4.8,
-    image_url: "https://cdn.flyonui.com/fy-assets/components/carousel/image-21.png",
+    image_url: "https://plus.unsplash.com/premium_photo-1682148196781-8bbcdfd7f537?q=80&w=872&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ const STATIC_PRODUCTS = [
     price: 2800,
     warranty: '5 Years',
     rating: 4.8,
-    image_url: "https://cdn.flyonui.com/fy-assets/components/carousel/image-14.png",
+    image_url: "https://plus.unsplash.com/premium_photo-1679917152411-353fd633e218?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 3,
@@ -35,7 +35,7 @@ const STATIC_PRODUCTS = [
     price: 1200,
     warranty: '5 Years',
     rating: 4.8,
-    image_url: "https://cdn.flyonui.com/fy-assets/components/carousel/image-14.png",
+    image_url: "https://plus.unsplash.com/premium_photo-1679437976868-f7f3c805b0d4?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 4,
@@ -46,7 +46,7 @@ const STATIC_PRODUCTS = [
     price: 5000,
     warranty: '10 Years',
     rating: 4.8,
-    image_url: "https://cdn.flyonui.com/fy-assets/components/carousel/image-21.png",
+    image_url: "https://plus.unsplash.com/premium_photo-1682148196781-8bbcdfd7f537?q=80&w=872&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 5,
@@ -57,7 +57,7 @@ const STATIC_PRODUCTS = [
     price: 250,
     warranty: '25 Years',
     rating: 4.8,
-    image_url: "https://cdn.flyonui.com/fy-assets/components/carousel/image-21.png",
+    image_url: "https://plus.unsplash.com/premium_photo-1661961617519-ce160a561ee4?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 6,
@@ -68,7 +68,7 @@ const STATIC_PRODUCTS = [
     price: 4500,
     warranty: '3 Years',
     rating: 4.8,
-    image_url: "https://cdn.flyonui.com/fy-assets/components/carousel/image-21.png",
+    image_url: "https://plus.unsplash.com/premium_photo-1682148026899-d21f17c04e80?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
 

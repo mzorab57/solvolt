@@ -172,7 +172,10 @@ const CardNav = ({
             {/* data-card-nav-logo */}
           <div
             className="logo-container ">
+              <a href='/'>
+
             <img src={'./logo.png'} alt={logoAlt} className="logo h-32 mt-2" />
+              </a>
           </div>
     {/* data-card-nav-hamburger-menu */}
         <div

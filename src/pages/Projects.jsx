@@ -109,13 +109,32 @@ const Products = () => {
   ];
 
   const galleryImages = [
-    { src: "https://cdn.flyonui.com/fy-assets/components/carousel/image-21.png", alt: "mountain" },
-    { src: "https://cdn.flyonui.com/fy-assets/components/carousel/image-14.png", alt: "sand" },
-    { src: "https://cdn.flyonui.com/fy-assets/components/carousel/image-21.png", alt: "mountain" },
-    { src: "https://cdn.flyonui.com/fy-assets/components/carousel/image-14.png", alt: "sand" },
-    { src: "https://cdn.flyonui.com/fy-assets/components/carousel/image-7.png", alt: "cloud" },
-    { src: "https://cdn.flyonui.com/fy-assets/components/carousel/image-7.png", alt: "cloud" },
-  ];
+  { 
+    src: "https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", 
+    alt: "solar panels on roof" 
+  },
+  { 
+    src: "https://plus.unsplash.com/premium_photo-1679917152411-353fd633e218?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", 
+    alt: "solar farm" 
+  },
+  { 
+    src: "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=1200", 
+    alt: "residential solar installation" 
+  },
+  { 
+    src: "https://plus.unsplash.com/premium_photo-1679437976868-f7f3c805b0d4?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", 
+    alt: "technician installing solar panels" 
+  },
+  { 
+    src: "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=1200", 
+    alt: "solar panels blue sky" 
+  },
+  { 
+    src: "https://plus.unsplash.com/premium_photo-1682148196781-8bbcdfd7f537?q=80&w=872&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", 
+    alt: "large solar power plant" 
+  },
+];
+
 
   return (
 
