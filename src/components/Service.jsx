@@ -1,44 +1,44 @@
 import React from 'react'
 import { FeatureCard } from './blocks/grid-feature-cards'
 import { 
-  Code, 
-  Smartphone, 
-  Globe, 
-  Database, 
-  Shield, 
-  Zap
+  Battery,
+  Zap,
+  Plug,
+  Leaf,
+  Shield,
+  Clock
 } from 'lucide-react'
 
 const services = [
   {
-    icon: Code,
-    title: "Web Development",
-    description: "Custom web applications built with modern technologies and best practices for optimal performance."
-  },
-  {
-    icon: Smartphone,
-    title: "Mobile Development",
-    description: "Native and cross-platform mobile apps that deliver exceptional user experiences across all devices."
-  },
-  {
-    icon: Globe,
-    title: "Digital Marketing",
-    description: "Strategic digital marketing campaigns to boost your online presence and drive business growth."
-  },
-  {
-    icon: Database,
-    title: "Data Analytics",
-    description: "Transform your data into actionable insights with advanced analytics and visualization tools."
-  },
-  {
-    icon: Shield,
-    title: "Cybersecurity",
-    description: "Comprehensive security solutions to protect your digital assets and ensure business continuity."
+    icon: Battery,
+    title: "UPS Solutions",
+    description: "Require a solution and gain a professional installation with high quality and 3 years warranty."
   },
   {
     icon: Zap,
-    title: "Cloud Solutions",
-    description: "Scalable cloud infrastructure and migration services for enhanced performance and reliability."
+    title: "Power Solutions",
+    description: "Your power is our concern. Uninterruptable power continuity is provided effortlessly with unlimited capacity."
+  },
+  {
+    icon: Plug,
+    title: "Inverter Installation",
+    description: "Long back up time can be obtained with our high-quality inverters."
+  },
+  {
+    icon: Leaf,
+    title: "Green Energy",
+    description: "With us, the earth is securer, unpolluted, healthier. Life is not threatened over here."
+  },
+  {
+    icon: Clock,
+    title: "Backup Power Solution",
+    description: "Leave your inquiry to PowerSolid, and your backup time need is provided easily."
+  },
+  {
+    icon: Shield,
+    title: "Security Solution",
+    description: "Your machines and devices are preserved and protected with our solutions."
   }
 ]
 

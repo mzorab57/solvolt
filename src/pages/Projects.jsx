@@ -199,33 +199,7 @@ const Products = () => {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 bg-gradient-card">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-foreground">
-            Why Choose Solvolt Products?
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { icon: Shield, title: "Quality Guaranteed", desc: "All products backed by international standards" },
-              { icon: Zap, title: "High Performance", desc: "Cutting-edge technology for maximum efficiency" },
-              { icon: Sun, title: "Eco-Friendly", desc: "Sustainable solutions for a better tomorrow" },
-              { icon: Battery, title: "Long Warranty", desc: "Extended warranty periods for peace of mind" },
-            ].map((feature, index) => {
-              const Icon = feature.icon;
-              return (
-                <div key={index} className="text-center animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
-                  <div className="w-16 h-16 rounded-full bg-gradient-hero flex items-center justify-center mx-auto mb-4">
-                    <Icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2 text-foreground">{feature.title}</h3>
-                  <p className="text-muted-foreground">{feature.desc}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+     
 
 
     </section>
