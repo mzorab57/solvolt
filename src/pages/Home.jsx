@@ -3,12 +3,12 @@ import Service from '../components/Service';
 import Technologie from '../components/Technologie';
 import Partners from '../components/Partners';
 import { Story } from '../components/Story';
-import Project from '@/components/Project';
-import Gallery from '@/components/Gallery';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import Slider from '@/components/Slider';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import GalleryCircle from '@/components/GalleryCircle';
+import Location from '@/components/Location';
 
 
 
@@ -29,12 +29,14 @@ const Home = () => {
       <Hero />
       <Story />
       <Service />
-      <Project />
+    <GalleryCircle />
+      {/* <Project /> */}
       <Technologie />
       <WhyChooseUs />
-      {/* <Gallery /> */}
       <Slider />
+      <Location />
       <Partners />
+     
     </div>
   );
 };

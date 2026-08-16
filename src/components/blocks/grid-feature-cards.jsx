@@ -9,24 +9,29 @@ export function FeatureCard({
 	const p = genRandomPattern();
 
 	return (
-        <div className={cn('relative overflow-hidden p-6', className)} {...props}>
+        <div className={cn('relative overflow-hidden p-6 rounded-2xl bg-black/5 backdrop-blur-xl border border-black/10 ring-1 ring-black/5 shadow-xl', className)} {...props}>
+            <div className="pointer-events-none absolute inset-0">
+                <div className="absolute -top-16 -left-16 w-48 h-48 rounded-full bg-black/10 blur-2xl" />
+                <div className="absolute -bottom-20 -right-20 w-56 h-56 rounded-full bg-black/5 blur-3xl" />
+            </div>
             
             <div
                 className="pointer-events-none absolute top-0 left-1/4 -mt-2 -ml-20 h-full w-full [mask-image:linear-gradient(black,transparent)]">
 				<div
-                    className="from-foreground/5 -skew-x-12  to-foreground/20 absolute inset-0 bg-gradient-to-r [mask-image:radial-gradient(farthest-side_at_top,white,transparent)] opacity-100">
+                    className="from-black/10 -skew-x-12 to-black/20 absolute inset-0 bg-gradient-to-r [mask-image:radial-gradient(farthest-side_at_top,white,transparent)] opacity-100">
 					<GridPattern
                         width={20}
                         height={20}
                         x="-16"
                         y="4"
                         squares={p}
-                        className="fill-foreground/5 stroke-foreground/25  absolute inset-0 h-full w-full mix-blend-overlay" />
+                        className="fill-black/10 stroke-black/20 absolute inset-0 h-full w-full mix-blend-overlay" />
 				</div>
+                
 			</div>
-            <feature.icon className="text-foreground/75 size-6" strokeWidth={1} aria-hidden />
-            <h3 className="mt-10 text-sm md:text-base text-primary">{feature.title}</h3>
-            <p className="text-muted-foreground relative z-20 mt-2 text-xs font-light">{feature.description}</p>
+            <feature.icon className="text-black/90 size-6" strokeWidth={1} aria-hidden />
+            <h3 className="mt-8 text-sm md:text-base text-b/90">{feature.title}</h3>
+            <p className="text-b/80 relative z-20 mt-2 text-xs font-light">{feature.description}</p>
         </div>
     );
 }

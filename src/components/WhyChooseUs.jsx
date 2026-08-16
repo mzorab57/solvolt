@@ -1,21 +1,21 @@
 import React from 'react';
-import { UserCheck, Cpu, Layers } from 'lucide-react';
+import { Sun, ShieldCheck, Wrench } from 'lucide-react';
 
 const features = [
   {
-    title: 'Individual Approach',
-    desc: 'We will be your dependable partner and will constantly develop quality.',
-    Icon: UserCheck,
+    title: 'Solutions Tailored to Your Needs',
+    desc: 'We design solar energy systems based on the specific needs of your home, business, or project.',
+    Icon: Sun,
   },
   {
-    title: 'Modern Technologies',
-    desc: 'We deal with UPS, solar panels, inverters, batteries, and related power solutions.',
-    Icon: Cpu,
+    title: 'Quality & Reliability',
+    desc: 'We provide reliable and high-quality solar solutions using premium equipment and professional expertise.',
+    Icon: ShieldCheck,
   },
   {
-    title: 'Complex Solutions',
-    desc: 'Develop quality for the products to all of our customers worldwide.',
-    Icon: Layers,
+    title: 'Complete Service & Support',
+    desc: 'From consultation and system design to installation and after-sales support, our team is with you every step.',
+    Icon: Wrench,
   },
 ];
 

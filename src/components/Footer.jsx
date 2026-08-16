@@ -1,113 +1,125 @@
-import { Link } from 'react-router-dom';
+import { 
+  FaWhatsapp, 
+  FaInstagram, 
+  FaFacebook, 
+  FaLinkedin, 
+  FaTiktok, 
+  FaMapMarkerAlt, 
+  FaPhoneAlt, 
+  FaEnvelope 
+} from "react-icons/fa";
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
-
   return (
-    <footer id="contact" className="bg-gray-900 text-white">
-      <div className="container-custom section-padding">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Company Info */}
-          <div className="lg:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <img src="/logo.png" alt="Solvolt" className="h-20 w-24 scale-150 " />
-             
+    <footer id="contact" className="relative bg-slate-950 text-slate-300 pt-16 pb-8 border-t border-slate-800">
+      {/* Subtle top gradient accent */}
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-600 via-sky-400 to-emerald-500"></div>
+
+      <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
+        <div className="grid grid-cols-1 md:grid-cols-2  gap-12 lg:gap-8 items-center">
+          
+          {/* 1. Company Info */}
+          <div className="flex flex-col space-y-6">
+            <div className="flex items-center">
+              {/* Removed scale-150 and used proper width/height for better control */}
+              <img src="/logon.png" alt="Solvolt" className="h-28 w-28 scale-150 object-contain drop-shadow-lg" />
             </div>
-            <p className="text-gray-300 mb-6 max-w-md">
+            <p className="text-slate-400 text-sm leading-relaxed max-w-sm">
               Solvolt is an international brand founded in Vietnam. We deal with UPS, solar panels, 
               inverters, batteries, and other related power solutions with a focus on sustainability 
               and reliability.
             </p>
-            <div className="flex space-x-4">
-              <a
-                href="#"
-                className="text-gray-400 hover transition-colors duration-200"
-                aria-label="Facebook"
-              >
-                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                </svg>
+            
+            {/* Social Icons */}
+            <div className="flex space-x-4 pt-2">
+              <a href="https://www.facebook.com/share/1BcMu21egr/" className="p-2 rounded-full bg-slate-900 border border-slate-800 hover:bg-blue-600 hover:border-blue-600 hover:text-white transition-all duration-300" aria-label="Facebook">
+                <FaFacebook size={18} />
               </a>
-              <a
-                href="https://www.instagram.com/solvolt_energy?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                className="text-gray-400 hover transition-colors duration-200"
-                aria-label="Instagram"
-              >
-                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987 6.62 0 11.987-5.367 11.987-11.987C24.014 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.49-3.323-1.297C4.198 14.895 3.708 13.744 3.708 12.447s.49-2.448 1.297-3.323c.875-.807 2.026-1.297 3.323-1.297s2.448.49 3.323 1.297c.807.875 1.297 2.026 1.297 3.323s-.49 2.448-1.297 3.323c-.875.807-2.026 1.297-3.323 1.297z"/>
-                </svg>
+              <a href="https://www.instagram.com/solvolt_energy?igsh=MXBmb3V4c3FmOHBmMQ==" className="p-2 rounded-full bg-slate-900 border border-slate-800 hover:bg-pink-600 hover:border-pink-600 hover:text-white transition-all duration-300" aria-label="Instagram">
+               <FaInstagram size={18} />
+              </a>
+              {/* Note: Update the link below to your actual LinkedIn link */}
+              <a href="https://www.instagram.com/solvolt_energy?igsh=MXBmb3V4c3FmOHBmMQ==" className="p-2 rounded-full bg-slate-900 border border-slate-800 hover:bg-blue-700 hover:border-blue-700 hover:text-white transition-all duration-300" aria-label="LinkedIn">
+               <FaLinkedin size={18} />
+              </a>
+              <a href="https://www.tiktok.com/@solvolt_energy?_r=1&_t=ZS-92s5YqDycKr" className="p-2 rounded-full bg-slate-900 border border-slate-800 hover:bg-slate-700 hover:border-slate-700 hover:text-white transition-all duration-300" aria-label="TikTok">
+               <FaTiktok size={18} />
               </a>
             </div>
           </div>
 
-          {/* Quick Links */}
-          {/* <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/" className="text-gray-300 hover:text-white transition-colors duration-200">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link to="/about" className="text-gray-300 hover:text-white transition-colors duration-200">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" className="text-gray-300 hover:text-white transition-colors duration-200">
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" className="text-gray-300 hover:text-white transition-colors duration-200">
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div> */}
+        
 
-          {/* Contact Info */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
-            <div className="space-y-3">
-              <div className="flex items-start space-x-3">
-                <svg className="w-5 h-5 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                <p className="text-gray-300 text-sm">
-                  Iraq, Erbil, Qasemlo Street, opposite Karezaushk Hospital
-                </p>
-              </div>
-              <div className="flex items-center space-x-3">
-                <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-                <div className="text-gray-300 text-sm">
-                  <p>07701550944</p>
-                  <p>07706894747</p>
-                </div>
-              </div>
-              <div className="flex items-center space-x-3">
-                <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                <p className="text-gray-300 text-sm">info@solvoltenergy.com</p>
-              </div>
+          {/* 3. Contact Info */}
+          <div className="flex flex-col lg:items-end w-full">
+            <div className="w-full max-w-xs space-y-6">
+              <h3 className="text-xl font-bold text-white mb-2 relative inline-block">
+                Contact Info
+              
+              </h3>
+              
+              <ul className="space-y-5 mt-6">
+                {/* Location */}
+                <li className="flex items-start space-x-4">
+                  <div className="mt-1 bg-slate-900 p-2.5 rounded-lg border border-slate-800 text-blue-400">
+                    <FaMapMarkerAlt size={16} />
+                  </div>
+                  <p className="text-slate-400 text-sm leading-tight pt-1">
+                    Erbil, Azadi<br/>Street Kani
+                  </p>
+                </li>
+
+                {/* Phones */}
+                <li className="flex items-start space-x-4">
+                  <div className="mt-1 bg-slate-900 p-2.5 rounded-lg border border-slate-800 text-blue-400">
+                    <FaPhoneAlt size={16} />
+                  </div>
+                  <div className="text-slate-400 text-sm space-y-1.5 pt-1">
+                    <p className="hover:text-white transition-colors cursor-pointer">+964 750 960 5400</p>
+                    <p className="hover:text-white transition-colors cursor-pointer">+964 770 447 6500</p>
+                    <p className="hover:text-white transition-colors cursor-pointer">+964 750 088 5400</p>
+                    <p className="hover:text-white transition-colors cursor-pointer">+964 750 099 5400</p>
+                  </div>
+                </li>
+
+                {/* Email */}
+                <li className="flex items-center space-x-4">
+                  <div className="bg-slate-900 p-2.5 rounded-lg border border-slate-800 text-blue-400">
+                    <FaEnvelope size={16} />
+                  </div>
+                  <a href="mailto:info@solvoltenergy.com" className="text-slate-400 text-sm hover:text-white transition-colors">
+                    info@solvoltenergy.com
+                  </a>
+                </li>
+
+                {/* WhatsApp Button */}
+                <li className="pt-2">
+                  <a
+                    href="https://wa.me/9647509605400"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group flex items-center justify-center gap-3 bg-emerald-600/10 hover:bg-emerald-600 text-emerald-400 hover:text-white border border-emerald-500/20 px-4 py-2.5 rounded-xl transition-all duration-300 w-full"
+                  >
+                    <FaWhatsapp size={20} className="group-hover:scale-110 transition-transform" />
+                    <span className="text-sm font-medium tracking-wide">Message on WhatsApp</span>
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
+
         </div>
 
-         <div className="mt-12 pt-6 border-t border-gray-700 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Solvolt. all rights reserved.</p>
-          <p className="mt-2">
+        {/* Bottom Bar */}
+        <div className="mt-16 pt-6 border-t border-slate-800/60 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
+          <p>&copy; {new Date().getFullYear()} <span className="text-white font-semibold">Solvolt</span>. All rights reserved.</p>
+          <p className="flex items-center gap-1">
             Powered by{" "}
             <a 
               href="https://wa.me/96407701411893"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-500 hover:underline"
+              className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400 font-bold hover:opacity-80 transition-opacity"
             >
               Al-Code
             </a>

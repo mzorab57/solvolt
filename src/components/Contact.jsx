@@ -59,7 +59,7 @@ const Contact = () => {
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900 mb-1">Address</h4>
                     <p className="text-gray-600">
-                      Iraq, Erbil, Qasemlo Street, opposite Karezaushk Hospital
+                      Iraq, Erbil, Kani street , azadi
                     </p>
                   </div>
                 </div>
@@ -74,8 +74,10 @@ const Contact = () => {
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900 mb-1">Phone Numbers</h4>
                     <div className="text-gray-600 space-y-1">
-                      <p>07701550944</p>
-                      <p>07706894747</p>
+                      <p>+964 750 960 5400</p>
+                      <p>+964 770 447 6500</p>
+                      <p>+964 750 088 5400</p>
+                      <p>+964 750 099 5400</p>
                     </div>
                   </div>
                 </div>

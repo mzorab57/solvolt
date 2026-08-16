@@ -11,8 +11,7 @@ const CardNav = ({
   ease = 'power3.out',
   baseColor = '#fff',
   menuColor,
-  buttonBgColor,
-  buttonTextColor
+
 }) => {
   const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
@@ -161,7 +160,8 @@ const CardNav = ({
 
   return (
     <div
-      className={`card-nav-container rounded absolute left-1/2 -translate-x-1/2 w-[95%] max-w-[7xl] z-[99]  ${className}`}>
+    
+      className={`card-nav-container  rounded absolute left-1/2 -translate-x-1/2 w-[95%] max-w-[7xl] z-[99]  ${className}`}>
       <nav
         ref={navRef}
         className={`card-nav ${isExpanded ? 'open' : ''} ${location.pathname === '/' ? 'border-neutral-900 ' : ''}  ${isScrolled ? 'border-none ' : 'border-neutral-900 '} block h-[60px] p-0 rounded-lg  shadow-md relative overflow-hidden will-change-[height]`}
@@ -237,6 +237,9 @@ const CardNav = ({
         </div>
       </nav>
     </div>
+
+
+
   );
 };
 

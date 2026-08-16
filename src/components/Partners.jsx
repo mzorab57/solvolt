@@ -3,39 +3,51 @@ const Partners = () => {
     {
       name: "Interlight",
       logo: (
-        <img src="/logo.png" alt="Interlight" className="w-32 h-20" />
+        <img src="../assets/images/logo/logo-1.png" alt="Interlight" className="w-32 h-20" />
       )
     },
     {
       name: "Eternity",
       logo: (
-        <img src="/logo.png" alt="Eternity" className="w-32 h-20" />
+        <img src="../assets/images/logo/logo-2.webp" alt="Eternity" className="w-32 h-20" />
       )
     },
     {
       name: "Seraphim",
       logo: (
-        <img src="/logo.png" alt="Seraphim" className="w-32 h-20" />
+        <img src="../assets/images/logo/logo-3.avif" alt="Seraphim" className="w-32 h-20" />
+      )
+    },
+    {
+      name: "SOLVOT",
+      logo: (
+        <img src="/slogo.png" alt="Seraphim" className="w-32 h-20" />
       )
     },
     {
       name: "Deye",
       logo: (
-        <img src="/logo.png" alt="Deye" className="w-32 h-20" />
+        <img src="../assets/images/logo/logo-1.png" alt="Deye" className="w-32 h-20" />
       )
     },
     {
       name: "EVE",
       logo: (
-        <img src="/logo.png" alt="EVE" className="w-32 h-20" />
+        <img src="../assets/images/logo/logo-2.webp" alt="EVE" className="w-32 h-20" />
       )
     },
     {
       name: "Growatt",
       logo: (
-        <img src="/logo.png" alt="Growatt" className="w-32 h-20" />
+        <img src="../assets/images/logo/logo-3.avif" alt="Growatt" className="w-32 h-20" />
       )
-    }
+    },
+     {
+      name: "SOLVOT",
+      logo: (
+        <img src="/slogo.png" alt="Seraphim" className="w-32 h-20" />
+      )
+    },
   ];
 
   return (
@@ -55,7 +67,7 @@ const Partners = () => {
           <div className="marquee" role="region" aria-label="Partner logos marquee">
             <div className="marquee__inner">
               {[...partners, ...partners].map((partner, idx) => (
-                <div key={idx} className="marquee__item bg-primary-primary">
+                <div key={idx} className="marquee__item ">
                   {partner.logo}
                 </div>
               ))}
